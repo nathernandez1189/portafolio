@@ -1,0 +1,528 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #5c02d2; /* Morado */
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;; /* Centra los elementos */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+header .logo h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 30px; /* Separación entre el logo y los enlaces */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Ajusta el espacio entre los enlaces */
+  transition: all 0.3s ease;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+header nav ul li a:hover {
+  color: #c59cff; /* Color del hover */
+}
+
+
+/* Menu Hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Navigation menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  transition: transform 0.3s ease;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+/* Sección de Introducción */
+#inicio {
+  background-color: #6E07F3; /* Morado */
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+}
+
+#inicio h2 {
+  font-size: 48px; /* Tamaño grande para el título */
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+#inicio p {
+  font-size: 22px; /* Tamaño más pequeño para la descripción */
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+#inicio .intro-image img {
+  width: 400px; /* Ajusta el tamaño de la imagen */
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 0;
+  border: 5px solid white; /* Añade borde blanco */
+}
+
+/* Sección de Sobre mí */
+#sobre-mi {
+  background-color: #fff;
+  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Centra el contenido */
+  align-items: center;  /* Centra el contenido verticalmente */
+  gap: 40px; /* Ajusta el espacio entre la imagen y el texto */
+}
+
+#sobre-mi h2 {
+  font-size: 50px;
+  color: #333;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#sobre-mi p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#sobre-mi .about-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Sección de Valores */
+#valores {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  object-fit: cover;
+}
+
+#valores h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #6E07F3; /* Morado */
+}
+
+#valores .valores-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.valor-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.valor-card h3 {
+  font-size: 24px;
+  color: #6E07F3;
+  margin-bottom: 15px;
+}
+
+.valor-card p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Sección de Misión y Visión */
+#mision-vision {
+  background-color: #ecf0f1; /* Fondo suave */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#mision-vision h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #6E07F3; /* Morado */
+  font-weight: bold;
+}
+
+#mision-vision .contenedor-mision-vision {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.mision, .vision {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.mision h3, .vision h3 {
+  font-size: 24px;
+  color: #6E07F3; /* Morado */
+  margin-bottom: 20px;
+}
+
+.mision p, .vision p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Sección de Habilidades */
+#habilidades {
+  background-color: #ecf0f1;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#habilidades h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #6E07F3; /* Morado */
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.skill {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.skill h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #6E07F3; /* Morado */
+}
+
+.skill p {
+  font-size: 16px;
+}
+
+/* Sección de Proyectos */
+#proyectos {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido dentro del proyecto */
+  justify-content: center; /* Centra todo verticalmente */
+}
+
+#proyectos h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #6E07F3; /* Morado */
+  text-align: center; /* Centra el encabezado */
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  display: flex;
+  justify-content: center; 
+  justify-items: center; /* Centra los elementos dentro de cada celda */
+}
+
+.project {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px; /* Ajusta el tamaño máximo de las tarjetas */
+  width: 100%; /* Asegura que las tarjetas se adapten al contenedor */
+}
+
+.project img {
+  width: 100%;
+  max-width: 300px; /* Ajusta el tamaño de las imágenes */
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; /* Espacio debajo de las imágenes */
+}
+
+.project h3 {
+  font-size: 24px;
+  color: #6E07F3; /* Morado */
+  margin-top: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  color: #555;
+  max-width: 90%; /* Limita el tamaño del texto */
+  margin: 0 auto; /* Centra el texto */
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* Sección de Información de Contacto */
+#contacto {
+  background-color: #f4f4f4; /* Fondo gris claro */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #6E07F3; /* Morado */
+}
+
+#contacto .contact-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+#contacto .contact-info .info-left {
+  width: 45%;
+  text-align: left;
+}
+
+#contacto .contact-info .info-right {
+  width: 45%;
+}
+
+#contacto .contact-info p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+#contacto .contact-form input, #contacto .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#contacto .contact-form button {
+  background-color: #6E07F3;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contacto .contact-form button:hover {
+  background-color: #4700a3; /* Verde brillante */
+}
+
+/* Footer */
+footer {
+  background-color: #5c02d2; /* Morado */
+  color: #ecf0f1;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+footer .social-links {
+  margin-top: 20px;
+}
+
+footer .social-links a {
+  color: #ecf0f1;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #c59cff; /* Verde brillante */
+}
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  #proyectos {
+    padding: 60px 20px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr; /* En pantallas pequeñas, coloca los elementos en una sola columna */
+  }
+
+  .project img {
+    max-width: 100%;
+  }
+
+  .project h3 {
+    font-size: 20px;
+  }
+
+  .project p {
+    font-size: 14px;
+  }
+
+  #inicio {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #inicio h2 {
+    font-size: 36px; /* Reduce el tamaño en pantallas pequeñas */
+  }
+
+  #inicio p {
+    font-size: 18px;
+  }
+
+  #inicio .intro-image img {
+    width: 150px; /* Reduce el tamaño de la imagen en móvil */
+    height: 150px;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #6E07F3;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul.active {
+    transform: translateX(0);
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #6E07F3;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para distinguir del fondo */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul.active {
+    transform: translateX(0);
+  }
+}
+
+/* Cambiar cursor */
+body {
+  cursor: url('https://img.icons8.com/ios/50/000000/3d-pointer.png'), auto;
+}
+
+
